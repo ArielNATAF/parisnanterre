@@ -34,7 +34,7 @@ public class Point2D {
         return false;
     }
 
-    private double distance(Point2D pt){
+    public double distance(Point2D pt){
         //Pythagore
 
         return Math.sqrt(Math.pow(this.y-pt.y,2)+Math.pow(this.x-pt.x,2));
