@@ -22,7 +22,7 @@ public class Cone extends Shape3D{
         return Math.PI * (radius*radius) * height /3;
     }
 
-    private double surface(){
+    public double surface(){
         return Math.PI * radius * (radius * Math.sqrt(height*height + radius*radius));
     }
 }

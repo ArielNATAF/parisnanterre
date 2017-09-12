@@ -24,7 +24,7 @@ public class Cuboid extends Shape3D{
         return length*width*height;
     }
 
-    private double surface(){
+    public double surface(){
         return 2*height*length + 2*height*width + 2*length*width;
     }
 }

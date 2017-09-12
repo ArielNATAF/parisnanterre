@@ -17,7 +17,7 @@ public class Point3D extends Point2D {
     }
 
     @Override
-    protected boolean isOrigin(){
+    public boolean isOrigin(){
         // vérifie si le point est à l'origine (0 à toutes les unités)
 
         if((this.x == 0) && (this.y == 0) && (this.z==0)){
@@ -26,12 +26,12 @@ public class Point3D extends Point2D {
         return false;
     }
 
-    public void translate (double a, double b,double c) {
-        // va décaler le point de a, b et c unités respectivement les axes sur x, y et z.
+    public void translate (double translateX, double translateY,double translateZ) {
+        // va décaler le point de tant d'unités respectivement les axes sur x, y et z.
 
-        this.x=this.x+a;
-        this.y=this.y+b;
-        this.z=this.z+c;
+        this.x=this.x+translateX;
+        this.y=this.y+translateY;
+        this.z=this.z+translateZ;
     }
 
     private double distance(Point3D pt){

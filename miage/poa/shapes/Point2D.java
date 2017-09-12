@@ -18,14 +18,14 @@ public class Point2D {
         this.y = y;
     }
 
-    public void translate(double a , double b){
-        // va décaler le point de a et b unités respectivement les axes sur x et y.
+    public void translate(double translateX , double translateY){
+        // va décaler le point de tant d'unités respectivement les axes sur x et y.
 
-        this.x=this.x+a;
-        this.y=this.y+b;
+        this.x=this.x+translateX;
+        this.y=this.y+translateY;
     }
 
-    protected boolean isOrigin(){
+    public boolean isOrigin(){
         // vérifie si le point est à l'origine (0 à toutes les unités)
 
         if((this.x == 0) && (this.y == 0)){
