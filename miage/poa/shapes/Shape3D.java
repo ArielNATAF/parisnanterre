@@ -17,7 +17,7 @@ public abstract class Shape3D {
         this.refPoint = refPoint;
     }
 
-    private double volume(){return 0;}
+    public abstract double volume();
 
     public Point3D getRefPoint() {
         return refPoint;

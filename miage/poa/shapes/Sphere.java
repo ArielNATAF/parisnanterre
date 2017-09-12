@@ -17,7 +17,7 @@ public class Sphere extends Shape3D {
         this.radius = radius;
     }
 
-    private double volume(){
+    public double volume(){
         return 4 * Math.PI * radius*radius*radius /3;
     }
 }

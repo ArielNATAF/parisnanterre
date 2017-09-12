@@ -18,7 +18,7 @@ public class Cone extends Shape3D{
         this.radius = radius;
     }
 
-    private double volume(){
+    public double volume(){
         return Math.PI * (radius*radius) * height /3;
     }
 

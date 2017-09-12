@@ -9,9 +9,7 @@ package fr.parisnanterre.miage.poa.shapes;
  * Therefor, I, arielnataf, sing His sacred Psalms. Heretic beware His wrath.			      ||||
  */
 
-public class Shape {public double surface;
+public abstract class Shape {public double surface;
 
-    public Shape(double surface) {
-        this.surface = surface;
-    }
+    public abstract double surface ();
 }

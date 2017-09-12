@@ -9,23 +9,25 @@ package fr.parisnanterre.miage.poa.shapes;
  * Therefor, I, arielnataf, sing His sacred Psalms. Heretic beware His wrath.			      ||||
  */
 
-public class Point2D {public double x;
-public double  y;
+public class Point2D {
+    public double x;
+    public double y;
 
     public Point2D(double x, double y) {
         this.x = x;
         this.y = y;
     }
 
-    private void translate(double x , double y){
-        double tmp;
+    public void translate(double a , double b){
+        // va décaler le point de a et b unités respectivement les axes sur x et y.
 
-        tmp=x;
-        this.x= y;
-        this.y= tmp;
+        this.x=this.x+a;
+        this.y=this.y+b;
     }
 
     protected boolean isOrigin(){
+        // vérifie si le point est à l'origine (0 à toutes les unités)
+
         if((this.x == 0) && (this.y == 0)){
             return true;
         }
@@ -33,6 +35,8 @@ public double  y;
     }
 
     private double distance(Point2D pt){
+        //Pythagore
+
         return Math.sqrt(Math.pow(this.y-pt.y,2)+Math.pow(this.x-pt.x,2));
     }
 

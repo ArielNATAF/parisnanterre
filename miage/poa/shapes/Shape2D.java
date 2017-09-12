@@ -16,9 +16,7 @@ public abstract class Shape2D {
         this.refPoint = refPoint;
     }
 
-    private double perimeter(){
-        return 0;
-    }
+    public abstract double perimeter();
 
     public Point2D getRefPoint() {
         return refPoint;

@@ -20,7 +20,7 @@ public class Cuboid extends Shape3D{
         this.height = height;
     }
 
-    private double volume(){
+    public double volume(){
         return length*width*height;
     }
 

@@ -13,4 +13,13 @@ public class Carre extends Rectangle {
     public Carre(Point2D refPoint, double length, double width) {
         super(refPoint, length, width);
     }
+
+    @Override
+    public String toString() {
+        return "Carre{" +
+                "length=" + length +
+                ", width=" + width +
+                ", surface=" + surface()+
+                '}';
+    }
 }

@@ -10,15 +10,15 @@ package fr.parisnanterre.miage.poa.shapes;
  */
 
 public class Rectangle extends Shape2D {
-    public double lenght, width;
+    public double length, width;
 
-    public double perimeter(){return 2*(lenght+width);}
+    public double perimeter(){return 2*(length+width);}
 
-    public double surface(){return lenght*width;}
+    public double surface(){return length*width;}
 
-    public Rectangle(Point2D refPoint, double lenght, double width) {
+    public Rectangle(Point2D refPoint, double length, double width) {
         super(refPoint);
-        this.lenght = lenght;
+        this.length = length;
         this.width = width;
     }
 }
