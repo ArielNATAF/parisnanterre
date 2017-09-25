@@ -9,7 +9,7 @@ to safeguard the human race and to offer His protection to the faithful.  			  -
  * Therefor, I, arielnataf, sing His sacred Psalms. Heretic beware His wrath.			      ||||
  */
 
-fun main(args: Array<String>) {
+/*fun main(args: Array<String>) {
     val p =Point2D(1.0, 2.0)
 
     val p3=Point3D(3.0,2.0,1.0)
@@ -23,4 +23,4 @@ fun main(args: Array<String>) {
     println("x->${p3.x}, y->${p3.y}, z->${p3.z},")
     p3.translate(1.0,-2.0,5.0)
     println("x->${p3.x}, y->${p3.y}, z->${p3.z},")
-}
+}*/
