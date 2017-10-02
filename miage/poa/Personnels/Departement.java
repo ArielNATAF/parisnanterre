@@ -8,6 +8,7 @@ package fr.parisnanterre.miage.poa.Personnels;
  * to safeguard the human race and to offer His protection to the faithful.  		  ------- |||| -------
  * Therefor, I, arielnataf, sing His sacred Psalms. Heretic beware His wrath.			      ||||
  */
+
 public enum Departement {
     LANGUE("Langues"),
     PHILOSOPHIE("Philosophe"),
