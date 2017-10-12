@@ -15,11 +15,14 @@ public class RockPaperScissors {
     }
 
     public Result Play(RPSEnum p1, RPSEnum p2){
+        if (p1.equals(p2)) return Result.TIE;
         if( (   p1.equals(p1.PAPER) && p2.equals(p2.ROCK    ))  ||
-            (   p1.equals(p1.ROCK) && p2.equals(p2.CISSORS  ))  ||
-            (   p1.equals(p1.CISSORS) && p2.equals(p2.PAPER ))){
-            return Result.WIN;}
+            (   p1.equals(p1.ROCK) && p2.equals(p2.SCISSORS  ))  ||
+            (   p1.equals(p1.SCISSORS) && p2.equals(p2.PAPER ))) return Result.WIN;
+        return Result.LOST;
+    }
 
+    public Result Play(Player p1, Player p2){
         return Result.LOST;
     }
 }

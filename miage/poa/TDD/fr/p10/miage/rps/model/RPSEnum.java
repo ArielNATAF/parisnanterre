@@ -11,7 +11,7 @@ package fr.parisnanterre.miage.poa.TDD.fr.p10.miage.rps.model;
  public enum  RPSEnum {
     ROCK("paper"),
     PAPER("rock"),
-    CISSORS("cissors");
+    SCISSORS("scissors");
     private final String name;
 
     RPSEnum(String name) {
