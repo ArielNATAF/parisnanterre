@@ -14,7 +14,7 @@ import java.util.Random;
  */
 public class Player {
     public String nom;
-    private Integer score;
+    private int score;
     private List<RPSEnum> mouvements = new ArrayList<>();
 
     public Player(String nom, List<RPSEnum> mouvements) {
@@ -25,16 +25,14 @@ public class Player {
 
     public Player(String nom){
         this.nom = nom;
-
+        this.score =0;
         Random random = new Random();
         for(int i=0; i<20;i++){
             int coupAleatoire = random.nextInt(3);
-            if (coupAleatoire == 0) mouvements.add(RPSEnum.PAPER);
-            if (coupAleatoire == 1) mouvements.add(RPSEnum.ROCK);
-            if (coupAleatoire == 2) mouvements.add(RPSEnum.SCISSORS);
+            if (coupAleatoire == RPSEnum.PAPER.getId()) mouvements.add(RPSEnum.PAPER);
+            if (coupAleatoire == RPSEnum.ROCK.getId()) mouvements.add(RPSEnum.ROCK);
+            if (coupAleatoire == RPSEnum.SCISSORS.getId()) mouvements.add(RPSEnum.SCISSORS);
         }
-        this.score =0;
-
     }
 
     public String getNom() {
@@ -45,19 +43,23 @@ public class Player {
         this.nom = nom;
     }
 
-    public Integer getScore() {
+    public int getScore() {
         return score;
     }
 
-    public void setScore(Integer score) {
+    void setScore(Integer score) {
         this.score = score;
     }
 
-    public List<RPSEnum> getNextMove(Integer indice) {
-        return mouvements.subList(indice+1, indice+1);
+    public RPSEnum getNextMove(int indice) {
+        return mouvements.get(indice);
     }
 
     public void setMouvements(List<RPSEnum> mouvements) {
         this.mouvements = mouvements;
+    }
+
+    public int getNbMouvement(){
+        return mouvements.size();
     }
 }

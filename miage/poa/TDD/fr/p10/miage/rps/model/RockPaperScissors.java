@@ -16,13 +16,30 @@ public class RockPaperScissors {
 
     public Result Play(RPSEnum p1, RPSEnum p2){
         if (p1.equals(p2)) return Result.TIE;
-        if( (   p1.equals(p1.PAPER) && p2.equals(p2.ROCK    ))  ||
-            (   p1.equals(p1.ROCK) && p2.equals(p2.SCISSORS  ))  ||
+        if( (   p1.equals(p1.PAPER) && p2.equals(p2.ROCK      ))  ||
+            (   p1.equals(p1.ROCK) && p2.equals(p2.SCISSORS   ))  ||
             (   p1.equals(p1.SCISSORS) && p2.equals(p2.PAPER ))) return Result.WIN;
         return Result.LOST;
     }
 
     public Result Play(Player p1, Player p2){
+
+        if( (   p1.getNextMove(0).equals(RPSEnum.PAPER) && p2.getNextMove(0).equals(RPSEnum.ROCK       ))  ||
+            (   p1.getNextMove(0).equals(RPSEnum.ROCK) && p2.getNextMove(0).equals(RPSEnum.SCISSORS    ))  ||
+            (   p1.getNextMove(0).equals(RPSEnum.SCISSORS) && p2.getNextMove(0).equals(RPSEnum.PAPER  ))) {
+            p1.setScore(p1.getScore()+1);
+            return Result.WIN;
+        }
+
+        if( (   p1.getNextMove(0).equals(RPSEnum.PAPER) && p2.getNextMove(0).equals(RPSEnum.PAPER      ))  ||
+            (   p1.getNextMove(0).equals(RPSEnum.ROCK) && p2.getNextMove(0).equals(RPSEnum.ROCK        ))  ||
+            (   p1.getNextMove(0).equals(RPSEnum.SCISSORS) && p2.getNextMove(0).equals(RPSEnum.SCISSORS))){
+            p1.setScore(p1.getScore()+1);
+            p2.setScore(p2.getScore()+1);
+            return Result.TIE;
+        }
+
+        p2.setScore(p2.getScore()+1);
         return Result.LOST;
     }
 }

@@ -9,13 +9,19 @@ package fr.parisnanterre.miage.poa.TDD.fr.p10.miage.rps.model;
  * Therefor, I, arielnataf, sing His sacred Psalms. Heretic beware His wrath.			      ||||
  */
  public enum  RPSEnum {
-    ROCK("paper"),
-    PAPER("rock"),
-    SCISSORS("scissors");
+    ROCK("paper",0),
+    PAPER("rock",1),
+    SCISSORS("scissors",2);
     private final String name;
+    private final int id;
 
-    RPSEnum(String name) {
+    RPSEnum(String name, int id) {
         this.name = name;
+        this.id=id;
+    }
+
+    public int getId() {
+        return id;
     }
 }
 
