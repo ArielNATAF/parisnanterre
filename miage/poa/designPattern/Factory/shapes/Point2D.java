@@ -1,4 +1,4 @@
-package fr.parisnanterre.miage.poa.shapes;
+package fr.parisnanterre.miage.poa.designPattern.Factory.shapes;
 
 /**
  * Created by arielnataf on 11/09/2017.											 ============/    \============

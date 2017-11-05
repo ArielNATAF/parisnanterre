@@ -1,5 +1,4 @@
-package fr.parisnanterre.miage.poa.shapes;
-
+package fr.parisnanterre.miage.poa.designPattern.Factory.shapes;
 
 /**
  * Created by arielnataf on 11/09/2017.											 ============/    \============
@@ -10,19 +9,28 @@ package fr.parisnanterre.miage.poa.shapes;
  * Therefor, I, arielnataf, sing His sacred Psalms. Heretic beware His wrath.			      ||||
  */
 
-public class Carre extends Rectangle {
-    public Carre(Point2D refPoint, double length, double width) {
-        super(refPoint, length, width);
+public class Rectangle extends Shape2D {
+    public double length, width;
+
+    public double perimeter() {
+        return 2 * (length + width);
     }
 
-
-    @Override
-    public String toString() {
-        return "Carre{" +
-                "length=" + length +
-                ", width=" + width +
-                ", surface=" + surface()+
-                '}';
+    public double surface() {
+        return length * width;
     }
 
+    public Rectangle(Point2D refPoint, double length, double width) {
+        super(refPoint);
+        this.length = length;
+        this.width = width;
+    }
+
+    public void setLength(double length) {
+        this.length = length;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
 }

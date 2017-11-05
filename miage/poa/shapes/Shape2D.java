@@ -21,4 +21,8 @@ public abstract class Shape2D {
     public Point2D getRefPoint() {
         return refPoint;
     }
+
+    public void setRefPoint(Point2D refPoint) {
+        this.refPoint = refPoint;
+    }
 }

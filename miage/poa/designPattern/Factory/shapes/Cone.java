@@ -1,4 +1,4 @@
-package fr.parisnanterre.miage.poa.shapes;
+package fr.parisnanterre.miage.poa.designPattern.Factory.shapes;
 
 /**
  * Created by arielnataf on 11/09/2017.											 ============/    \============
@@ -8,10 +8,21 @@ package fr.parisnanterre.miage.poa.shapes;
  to safeguard the human race and to offer His protection to the faithful.  			  ------- |||| -------
  * Therefor, I, arielnataf, sing His sacred Psalms. Heretic beware His wrath.			      ||||
  */
+public class Cone extends Shape3D {
+    public double height;
+    public double radius;
 
-public abstract class Shape {public double surface;
+    public Cone(Point3D refPoint, double height, double radius) {
+        super(refPoint);
+        this.height = height;
+        this.radius = radius;
+    }
 
-    public abstract double surface ();
+    public double volume(){
+        return Math.PI * (radius*radius) * height /3;
+    }
 
-    public abstract Shape createShape();
+    public double surface(){
+        return Math.PI * radius * (radius * Math.sqrt(height*height + radius*radius));
+    }
 }

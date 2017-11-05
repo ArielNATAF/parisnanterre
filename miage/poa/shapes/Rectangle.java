@@ -21,4 +21,12 @@ public class Rectangle extends Shape2D {
         this.length = length;
         this.width = width;
     }
+
+    public void setLength(double length) {
+        this.length = length;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
 }

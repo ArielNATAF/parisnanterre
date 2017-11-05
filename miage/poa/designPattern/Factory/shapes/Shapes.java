@@ -1,4 +1,4 @@
-package fr.parisnanterre.miage.poa.shapes;
+package fr.parisnanterre.miage.poa.designPattern.Factory.shapes;
 
 /**
  * Created by arielnataf on 11/09/2017.											 ============/    \============
@@ -9,9 +9,8 @@ package fr.parisnanterre.miage.poa.shapes;
  * Therefor, I, arielnataf, sing His sacred Psalms. Heretic beware His wrath.			      ||||
  */
 
-public abstract class Shape {public double surface;
+public abstract class Shapes {public double surface;
 
     public abstract double surface ();
-
-    public abstract Shape createShape();
 }
+

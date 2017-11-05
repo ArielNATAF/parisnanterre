@@ -38,4 +38,8 @@ public class Point3D extends Point2D {
         //Pythagore EN 3D
         return Math.sqrt(Math.pow(this.y-pt.y,2)+Math.pow(this.x-pt.x,2)+Math.pow(this.z-pt.z,2));
     }
+
+    public void setZ(double z) {
+        this.z = z;
+    }
 }

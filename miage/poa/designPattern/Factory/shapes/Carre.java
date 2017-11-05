@@ -1,4 +1,5 @@
-package fr.parisnanterre.miage.poa.shapes;
+package fr.parisnanterre.miage.poa.designPattern.Factory.shapes;
+
 
 /**
  * Created by arielnataf on 11/09/2017.											 ============/    \============
@@ -9,9 +10,19 @@ package fr.parisnanterre.miage.poa.shapes;
  * Therefor, I, arielnataf, sing His sacred Psalms. Heretic beware His wrath.			      ||||
  */
 
-public abstract class Shape {public double surface;
+public class Carre extends Rectangle {
+    Carre(Point2D refPoint, double length) {
+        super(refPoint, length, length);
+    }
 
-    public abstract double surface ();
+    @Override
+    public String toString() {
+        return "Carre{" +
+                "length=" + length +
+                ", surface=" + surface()+
+                '}';
+    }
 
-    public abstract Shape createShape();
+
 }
+

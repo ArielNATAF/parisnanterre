@@ -1,4 +1,4 @@
-package fr.parisnanterre.miage.poa.shapes;
+package fr.parisnanterre.miage.poa.designPattern.Factory.shapes;
 
 /**
  * Created by arielnataf on 11/09/2017.											 ============/    \============
@@ -9,9 +9,20 @@ package fr.parisnanterre.miage.poa.shapes;
  * Therefor, I, arielnataf, sing His sacred Psalms. Heretic beware His wrath.			      ||||
  */
 
-public abstract class Shape {public double surface;
+public abstract class Shape2D extends Shapes {
+    private Point2D refPoint;
 
-    public abstract double surface ();
+    public Shape2D(Point2D refPoint) {
+        this.refPoint = refPoint;
+    }
 
-    public abstract Shape createShape();
+    public abstract double perimeter();
+
+    public Point2D getRefPoint() {
+        return refPoint;
+    }
+
+    public void setRefPoint(Point2D refPoint) {
+        this.refPoint = refPoint;
+    }
 }
