@@ -10,7 +10,6 @@ package fr.parisnanterre.miage.poa.designPattern.Factory.shapes;
  */
 
 public abstract class Shapes {public double surface;
-
     public abstract double surface ();
 }
 
